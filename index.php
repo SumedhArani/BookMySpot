@@ -157,70 +157,28 @@
                             </div>
 
                             <div class="main_portfolio_content">
-                                <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                  <img src="assets/images/p1.png" alt="" />
-                                    <div class="portfolio_images_overlay text-center">
-                                        <h6>GT World Mall</h6>
-                                        <p class="product_price">40 Rs/hr</p>
-                                        <a href="" class="btn btn-primary">Click here to book</a>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                    <img src="assets/images/p2.png" alt="" />
-                                    <div class="portfolio_images_overlay text-center">
-                                        <h6>Mantri Mall</h6>
-                                        <p class="product_price">35 Rs/hr</p>
-                                        <a href="" class="btn btn-primary">Click here to book</a>
-                                    </div>								
-                                </div>
-                                <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                    <img src="assets/images/p3.png" alt="" />
-                                    <div class="portfolio_images_overlay text-center">
-                                        <h6>Forum Mall</h6>
-                                        <p class="product_price">50 Rs/2hrs</p>
-                                        <a href="" class="btn btn-primary">Click here to book</a>
-                                    </div>								
-                                </div>
-                                <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                    <img src="assets/images/p4.png" alt="" />
-                                    <div class="portfolio_images_overlay text-center">
-                                        <h6>Orion Mall</h6>
-                                        <p class="product_price">12 Rs/hr</p>
-                                        <a href="" class="btn btn-primary">Click here to book</a>
-                                    </div>								
-                                </div>
-                                <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                    <img src="assets/images/p5.png" alt="" />
-                                    <div class="portfolio_images_overlay text-center">
-                                        <h6>Vaishnavi Sapphire Mall</h6>
-                                        <p class="product_price">10 Rs/hr</p>
-                                        <a href="" class="btn btn-primary">Click here to book</a>
-                                    </div>								
-                                </div>
-                                <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                    <img src="assets/images/p6.png" alt="" />
-                                    <div class="portfolio_images_overlay text-center">
-                                        <h6>Central Mall</h6>
-                                        <p class="product_price">25 Rs/hr</p>
-                                        <a href="" class="btn btn-primary">Click here to book</a>
-                                    </div>								
-                                </div>
-                                <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                    <img src="assets/images/p7.png" alt="" />
-                                    <div class="portfolio_images_overlay text-center">
-                                        <h6>Orion East Mall</h6>
-                                        <p class="product_price">15 Rs/hr</p>
-                                        <a href="" class="btn btn-primary">Click here to book</a>
-                                    </div>								
-                                </div>
-                                <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                    <img src="assets/images/p8.png" alt="" />
-                                    <div class="portfolio_images_overlay text-center">
-                                        <h6>Phoenix Market City</h6>
-                                        <p class="product_price">40 Rs/3hrs</p>
-                                        <a href="" class="btn btn-primary">Click here to book</a>
-                                    </div>								
-                                </div>
+
+                            <?php
+
+                            include "connect_to_db.php";
+                            $query= 'select distinct name from client';
+                            $result = mysqli_query($con , $query);  
+
+                            while($client = mysqli_fetch_array($result , MYSQLI_ASSOC))
+                            {
+                                $client_name=$client['name'];
+
+                                echo   "<div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
+                                            <img src='assets/images/$client_name.png' alt="" />
+                                            <div class="portfolio_images_overlay text-center">
+                                                <h6>".$client_name."</h6>
+                                                <p class="product_price">40 Rs/hr</p>
+                                                <a href='client_info.php?c_name=$client_name' class="btn btn-primary">Click here to book</a>
+                                            </div>
+                                        </div>";
+                            }
+                            ?>
+
                             </div>
                         </div>
                     </div>
