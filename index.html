@@ -90,7 +90,7 @@
                                         <li><a href="#portfolio">List Of Malls</a></li>
 										<li><a href="#footer_widget">Login</a></li>
 										 <li><a href="#footer_widget">Sign-Up</a></li>
-										<li><a href="#" class="booking">Parking Spot Booking</a></li>
+										<li><a href="#" class="booking">Our Clients</a></li>
                                         
                                     </ul>
                                 </div><!-- /.navbar-collapse -->

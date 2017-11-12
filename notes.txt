@@ -1,0 +1,18 @@
+1) logo on topmost bar needs to be fixed
+
+2) submission throttling currently uses malls.txt, needs to be dynamic as clients make changes
+
+3) update "Parking Spot Booking" in both index.html and bookPage.html to client side login
+
+4) - on bookPage.html, details that are reqd after clicking proceed need to match database
+   - making proceed details page look nicer if possible
+
+5) session of 300 seconds only during payment
+
+6) integration with database - 
+	i) client - mall owners - when they add or delete their mall
+	ii) login and sign up
+	iii) what else?
+	
+7) changing all files to follow conventions that our team has :P
+	
