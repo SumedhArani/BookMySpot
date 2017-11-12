@@ -161,21 +161,27 @@
                             <?php
 
                             include "connect_to_db.php";
-                            $query= 'select distinct name from client';
+                            $query= 'select distinct name, rate, address, client_id from client';
                             $result = mysqli_query($con , $query);  
 
                             while($client = mysqli_fetch_array($result , MYSQLI_ASSOC))
                             {
-                                $client_name=$client['name'];
-
-                                echo   "<div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                            <img src='assets/images/$client_name.png' alt="" />
-                                            <div class="portfolio_images_overlay text-center">
-                                                <h6>".$client_name."</h6>
-                                                <p class="product_price">40 Rs/hr</p>
-                                                <a href='client_info.php?c_name=$client_name' class="btn btn-primary">Click here to book</a>
+                              $client_name = $client['name'];
+                              $client_rate = $client['rate'];
+                              $client_addr = $client['address'];
+                              $client_idnum = $client['client_id'];
+                              #$query_more_info = 'select rate, client_id, address from client where name='.$client_name;
+                              #$result_more_info = mysqli_query($con, $query_more_info);
+                              #$client_info = mysqli_fetch_array($result_more_info , MYSQLI_ASSOC);
+                              echo "<div class='col-md-3 col-sm-4 col-xs-6 single_portfolio_text'>
+                                            <img src='assets/images/$client_idnum.png' alt='' />
+                                            <h5>".$client_name."</h5>
+                                            <div class='portfolio_images_overlay'>
+                                                <h6>".$client_addr."</h6>
+                                                <p class='product_price'>".$client_rate."</p>
+                                                <a href='client_info.php?c_name=$client_name' class='btn btn-primary'>Click here to book</a>
                                             </div>
-                                        </div>";
+                                    </div>";
                             }
                             ?>
 

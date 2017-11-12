@@ -50,11 +50,11 @@ INSERT INTO consumer VALUES (049,'Alvaro Rodiques',97778912456,'arqard@gmail.com
 INSERT INTO consumer VALUES (050,'Adnan Sharif',9991113520,'adsam@gmail.com','1992-02-21','Aadhar');
 
 
-INSERT INTO client VALUES (101,'Garuda Mall','MG Road Bangalore','Mall');
-INSERT INTO client VALUES (102,'Royal Meenakshi Mall','Bannerghatta Road Bangalore','Mall');
-INSERT INTO client VALUES (103,'Orion Mall','Rajajinagar Bangalore','Mall');
-INSERT INTO client VALUES (104,'Mantri Square Mall','Malleshwaram Bangalore','Mall');
-INSERT INTO client VALUES (105,'Phoenix Marketcity','Whitefield Bangalore','Mall');
+INSERT INTO client VALUES (101,'Garuda Mall','MG Road Bangalore','Mall', 40);
+INSERT INTO client VALUES (102,'Royal Meenakshi Mall','Bannerghatta Road Bangalore','Mall', 30);
+INSERT INTO client VALUES (103,'Orion Mall','Rajajinagar Bangalore','Mall', 35);
+INSERT INTO client VALUES (104,'Mantri Square Mall','Malleshwaram Bangalore','Mall', 50);
+INSERT INTO client VALUES (105,'Phoenix Marketcity','Whitefield Bangalore','Mall', 25);
 
 
 
