@@ -16,6 +16,7 @@ INSERT INTO consumer VALUES (015,'Serena John',7991212456,'sjhnn@gmail.com','198
 INSERT INTO consumer VALUES (016,'Nithin Ravi',9994443456,'aravi@gmail.com','1993-05-5','DL');
 INSERT INTO consumer VALUES (017,'Vishaka Mani',9981013456,'vish@gmail.com','1989-04-30','Aadhar');
 INSERT INTO consumer VALUES (018,'Vishal Rao',9992383456,'vishalr@gmail.com','1994-02-1','DL');
+INSERT INTO consumer VALUES (019,'Danish Sait',9091113555,'danisait@gmail.com','1989-02-24','DL');
 INSERT INTO consumer VALUES (020,'Lakshmi Sai',7990013456,'laksaoi@gmail.com','1992-09-11','DL');
 INSERT INTO consumer VALUES (021,'Apporva Shiv',9103313456,'apshiv@gmail.com','1993-02-24','DL');
 INSERT INTO consumer VALUES (022,'Pooja Ravi',9991113555,'pooj@gmail.com','1988-10-21','DL');
@@ -38,7 +39,6 @@ INSERT INTO consumer VALUES (038,'Ravindra Swamy',71231113456,'swamye@gmail.com'
 INSERT INTO consumer VALUES (039,'Joey Barton',9991113777,'adton@gmail.com','1985-10-30','DL');
 INSERT INTO consumer VALUES (040,'Namrata Shiv',9944443456,'shivnam@gmail.com','1992-03-17','Aadhar');
 INSERT INTO consumer VALUES (041,'Frank Albert',9991113000,'albertoo@gmail.com','1991-11-13','DL');
-INSERT INTO consumer VALUES (042,'Danish Sait',9091113555,'danisait@gmail.com','1989-02-24','DL');
 INSERT INTO consumer VALUES (042,'Rahul Sharma',9391313456,'asharaa@gmail.com','1990-10-21','DL');
 INSERT INTO consumer VALUES (043,'Akshara Rao',7771013456,'aksharaa@gmail.com','1997-1-21','DL');
 INSERT INTO consumer VALUES (044,'Srinath Ramu',9991113222,'Srina@gmail.com','1996-1-31','DL');
@@ -58,11 +58,11 @@ INSERT INTO client VALUES (105,'Phoenix Marketcity','Whitefield Bangalore','Mall
 
 
 
-INSERT INTO parking_lot VALUES (201,10,1,101,' yes ');
-INSERT INTO parking_lot VALUES (202,10,1,102,' yes ');
-INSERT INTO parking_lot VALUES (203,10,1,103,' yes ');
-INSERT INTO parking_lot VALUES (204,10,1,104,' yes ');
-INSERT INTO parking_lot VALUES (205,10,1,104,' yes ');
+INSERT INTO parking_lot VALUES (201,60,1,101,'yes');
+INSERT INTO parking_lot VALUES (202,10,1,102,'yes');
+INSERT INTO parking_lot VALUES (203,10,1,103,'yes');
+INSERT INTO parking_lot VALUES (204,10,1,104,'yes');
+INSERT INTO parking_lot VALUES (205,10,1,104,'yes');
 
 
 
@@ -162,7 +162,7 @@ INSERT INTO parking_bay VALUES(803,'car parking',205);
 INSERT INTO parking_bay VALUES(804,'car parking',205);
 INSERT INTO parking_bay VALUES(805,'car parking',205);
 INSERT INTO parking_bay VALUES(806,'car parking',205);
-INERT INTO parking_bay VALUES(807,'car parking',205);
+INSERT INTO parking_bay VALUES(807,'car parking',205);
 INSERT INTO parking_bay VALUES(808,'car parking',205);
 INSERT INTO parking_bay VALUES(809,'car parking',205);
 INSERT INTO parking_bay VALUES(810,'car parking',205);
