@@ -2,7 +2,7 @@
 
 $user='root';
 $pass='';
-$dbname='bms';
+$dbname='bookmyspot';
 $con=mysqli_connect("localhost",$user,$pass,$dbname);
 //if(!$con)
 // print('ERROR : NOT CONNECTED!!');

@@ -1,0 +1,6 @@
+Report:
+	Cover sheet
+	Summary
+	Status
+	Printouts- FR, SRS, Design, Testing (final versions only)
+	Contribution/learning for each student - 1 page
