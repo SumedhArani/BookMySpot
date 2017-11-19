@@ -43,63 +43,62 @@
 								<a href=""><i class="fa fa-clock-o"></i> Book Parking Spots 24/7</a>
 								<a href=""><i class="fa fa-phone"></i>+918974523542</a>
 							</div>
-						</div>
 
-						<div class="col-md-4 col-sm-12">
-							<div class="head_top_social text-right">
-								<a href=""><i class="fa fa-facebook"></i></a>
-								<a href=""><i class="fa fa-google-plus"></i></a>
-								<a href=""><i class="fa fa-twitter"></i></a>
-								<a href=""><i class="fa fa-linkedin"></i></a>
-								<a href=""><i class="fa fa-pinterest-p"></i></a>
-								<a href=""><i class="fa fa-youtube"></i></a>
-								<a href=""><i class="fa fa-phone"></i></a>
-								<a href=""><i class="fa fa-camera"></i></a>
-							</div>	
-						</div>
+                        </div>
 
-					</div>			
-				</div>
-			</div>
+                        <div class="col-md-4 col-sm-12">
+                            <div class="head_top_social text-right">
+                                <a href=""><i class="fa fa-facebook"></i></a>
+                                <a href=""><i class="fa fa-google-plus"></i></a>
+                                <a href=""><i class="fa fa-twitter"></i></a>
+                                <a href=""><i class="fa fa-linkedin"></i></a>
+                                <a href=""><i class="fa fa-pinterest-p"></i></a>
+                                <a href=""><i class="fa fa-youtube"></i></a>
+                                <a href=""><i class="fa fa-phone"></i></a>
+                                <a href=""><i class="fa fa-camera"></i></a>
+                            </div>	
+                        </div>
 
-			<!-- End navbar-collapse-->
+                    </div>			
+                </div>
+            </div>
 
-			<div class="main_menu_bg">
-				<div class="container"> 
-					<div class="row">
-						<nav class="navbar navbar-default">
-							<div class="container-fluid">
-								<!-- Brand and toggle get grouped for better mobile display -->
-								<div class="navbar-header">
-									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-										<span class="sr-only">Toggle navigation</span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-									</button>
-									<a class="navbar-brand our_logo" href="#"><img src="assets/images/logo.png" alt="" /></a>
-								</div>
+            <!-- End navbar-collapse-->	
+        <div class="main_menu_bg">
+                <div class="container"> 
+                    <div class="row">
+                        <nav class="navbar navbar-default">
+                            <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand our_logo" href="#"><img src="assets/images/logo.png" alt="" /></a>
+                                </div>
 
-								<!-- Collect the nav links, forms, and other content for toggling -->
-								<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-									<ul class="nav navbar-nav navbar-right">
-										<li><a href="#slider">Home</a></li>
-										<li><a href="#abouts">About</a></li>
-									   
-										<li><a href="#portfolio">List Of Malls</a></li>
-										<li><a href="#footer_widget">Login</a></li>
-										 <li><a href="#footer_widget">Sign-Up</a></li>
-										<li><a href="#" class="booking">Our Clients</a></li>
-										
-									</ul>
-								</div><!-- /.navbar-collapse -->
-							</div><!-- /.container-fluid -->
-						</nav>
-					</div>
-				</div>
-			</div>	
-		</header> <!-- End Header Section -->
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="#slider">Home</a></li>
+                                        <li><a href="#abouts">About</a></li>
+                                       
+                                        <li><a href="loginsignup.php">Login</a></li>
+										<li><a href="loginsignup.php">Sign Up</a></li>
+										<li><a href="client.html" class="booking">Our Clients</a></li>
+                                        
+                                    </ul>
+                                </div><!-- /.navbar-collapse -->
+                            </div><!-- /.container-fluid -->
+                        </nav>
+                    </div>
+                </div>
+            </div>	
+        </header> <!-- End Header Section -->
 
 		<section id="slider" class="slider">
 			<div class="slider_overlay">
@@ -110,7 +109,7 @@
 								<div class="main_slider_content wow zoomIn" data-wow-duration="1s">
 									<h1>BookMySpot</h1>
 									<p>Avoid unnecessary parking feuds and book a parking spot in advance using BookMySpot. </p>
-									<a href="#portfolio" style="color: white;">
+									<a href="loginsignup.php" style="color: white;">
 										<button class="btn-lg">
 											Click here to book
 										</button>
@@ -149,54 +148,6 @@
 				</div>
 			</div>
 		</section>
-
-		<section id="portfolio" class="portfolio">
-			<div class="container">
-				<div class="row">
-					<div class="portfolio_content text-center  wow fadeIn" data-wow-duration="5s">
-						<div class="col-md-12">
-							<div class="head_title text-center">
-								<h4>BookMySpot</h4>
-								<h3>List Of Malls</h3>
-							</div>
-
-							<div class="main_portfolio_content">
-
-							<?php
-
-							include "connect_to_db.php";
-							$query= 'select distinct name, rate, address, client_id from client';
-							$result = mysqli_query($con , $query);
-
-							while($client = mysqli_fetch_array($result , MYSQLI_ASSOC))
-							{
-							  $client_name = $client['name'];
-							  $client_rate = $client['rate'];
-							  $client_addr = $client['address'];
-							  $client_idnum = $client['client_id'];
-							  #$query_more_info = 'select rate, client_id, address from client where name='.$client_name;
-							  #$result_more_info = mysqli_query($con, $query_more_info);
-							  #$client_info = mysqli_fetch_array($result_more_info , MYSQLI_ASSOC);
-							  echo "<div class='col-md-3 col-sm-4 col-xs-6 single_portfolio_text'>
-											<img src='assets/images/$client_idnum.png' alt='' />
-											<h5>".$client_name."</h5>
-											<div class='portfolio_images_overlay'>
-												<h6>".$client_addr."</h6>
-												<p class='product_price'>".$client_rate."</p>
-												<a href='bookPage.html?c_name=$client_name' class='btn btn-primary'>Click here to book</a>
-											</div>
-									</div>";
-							}
-							?>
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		
 
 		<section id="mobaileapps" class="mobailapps">
 			<div class="slider_overlay">
@@ -243,70 +194,9 @@
 								</div>
 							</div>
 						</div>
-
-					 
-						<div class="col-md-4">
-							<div class="single_widget wow fadeIn" data-wow-duration="5s">
-								<h3>Login</h3>
-
-								<div class="single_widget_form text-left">
-									<form action="#" id="formid">
-										<div class="form-group">
-											<input type="text" class="form-control" name="name" placeholder="Username" required="">
-										</div>
-
-
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Password">
-										</div> <!-- end of form-group -->
-
-
-										<input type="submit" value="Login" class="btn btn-primary">
-									</form>	
-								</div>
-							</div>
-						</div>
 					</div>
-
-<div class="col-md-4">
-							<div class="single_widget wow fadeIn" data-wow-duration="5s">
-								<h3>Sign-Up</h3>
-
-								<div class="single_widget_form text-left">
-									<form action="#" id="formid">
-										<div class="form-group">
-											<input type="text" class="form-control" name="name" placeholder="Name" required="">
-										</div>
-
-										<div class="form-group">
-											<input type="email" class="form-control" name="email" placeholder="Email" required="">
-										</div>
-
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Password">
-										</div> <!-- end of form-group -->
-
-										<div class="form-group">
-											<input type="text" class="form-control" name="message" rows="3" placeholder="Re-type Password">
-										</div>
-
-										<input type="submit" value="Sign Up" class="btn btn-primary">
-									</form> 
-								</div>
-							</div>
-						</div>
-					</div>
-
-
-
 				</div>
 			</div>
-
-
-
-
-
-
 		</section>
 
 

@@ -39,7 +39,6 @@
 	border-radius:0%;
 }
 button:hover{background-color:gray;}
-
 .button_last {
      background-color: green;
     color: white;
@@ -64,7 +63,6 @@ button:hover{background-color:gray;}
    opacity: 0.9;
     filter: alpha(opacity=10);
 }
-
 .button2 {
     background-color: #4CAF50; /* Green */
     border: none;
@@ -77,8 +75,6 @@ button:hover{background-color:gray;}
     margin: 4px 2px;
     cursor: pointer;
 }
-
-
 .num{
    
     position:absolute;
@@ -152,6 +148,7 @@ h5  {
 			  //var item = document.getElementById("cod").childNodes[0];
 			  //item.replaceChild(textnode, item.childNodes[0]);	
 				document.getElementById(tar).innerHTML = document.getElementById(sou).innerHTML;
+				window.location.href = '127.0.0.1:5000';
 			}
 			 
 			 
@@ -282,7 +279,7 @@ h5  {
      <div style="margin-left: 1000px;">
      <input type="text" id="searchbar" onkeypress="submissionThrotlling.makeDecission()"/>
      <img src="assets/images/search.png" width=30px height=30px/></img>
-     <a href="index.php#portfolio">
+     <a href="loggedindex.php#portfolio">
 		<div id="suggessionDiv" style="visibility: hidden"></div>
      </a>
 	 </div>	
