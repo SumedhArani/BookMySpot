@@ -198,11 +198,22 @@
 								</form>
                             </div>
                             <div id="change4" style="display:none">
-                            	 <h1 style="font-size:30px;">Are you sure?</h1>
-								<form>
-                            	<button onclick="" id="1" >Yes</button>
-								<button onclick="getOptions()" id="2" >No</button>
-								</form>
+                            	<form id="deleteform" method="POST" action="client_delete.php">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="mname" placeholder="Parking Area Name" required="">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="uname" required="" placeholder="Username">
+                                        </div> 
+                                        
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="pword" required="" placeholder="Password">
+                                        </div> 
+
+                                        <input type="submit" value="Yes, I'm Sure!" class="btn btn-primary"> 
+                                        <button onclick="getOptions()" id="2" class="btn btn-primary">No, I Love Your Services</button>
+                                </form>								
 							</div>
                         </div>
                     </div>
@@ -222,7 +233,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="copyright wow zoomIn" data-wow-duration="3s">
-							<p>Made with <i class="fa fa-heart"></i> by <a href="http://bootstrapthemes.co">Team 5</a>2017. All Rights Reserved</p>
+							<p>Made with <i class="fa fa-heart"></i> by <a href="https://www.github.com/SumedhArani/BookMySpot">Team 5</a>2017. All Rights Reserved</p>
 						</div>
                     </div>
                 </div>

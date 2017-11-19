@@ -25,14 +25,14 @@ num_bays INT NOT NULL,
 floor INT NOT NULL,
 client_id INT(5) UNSIGNED,
 islinked ENUM('yes','no'),
-FOREIGN KEY (client_id) REFERENCES client(client_id)
+FOREIGN KEY (client_id) REFERENCES client(client_id) ON DELETE CASCADE
 );
 
 CREATE TABLE parking_bay(
 bay_id INT(5) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 type VARCHAR(10),
 lot_id INT(5) UNSIGNED,
-FOREIGN KEY (lot_id) REFERENCES parking_lot(lot_id)
+FOREIGN KEY (lot_id) REFERENCES parking_lot(lot_id) ON DELETE CASCADE
 );
 
 
@@ -44,8 +44,8 @@ arrival_time TIME,
 leave_time TIME,
 consumer_id INT(6) UNSIGNED,
 bay_id INT(6) UNSIGNED,
-FOREIGN KEY (consumer_id) REFERENCES consumer(consumer_id),
-FOREIGN KEY (bay_id) REFERENCES parking_bay(bay_id),
+FOREIGN KEY (consumer_id) REFERENCES consumer(consumer_id) ON DELETE CASCADE,
+FOREIGN KEY (bay_id) REFERENCES parking_bay(bay_id) ON DELETE CASCADE,
 PRIMARY KEY(consumer_id,bay_id)
 );
 
@@ -57,8 +57,8 @@ end_time TIME,
 amount INT UNSIGNED,
 consumer_id INT(6) UNSIGNED,
 bay_id INT(6) UNSIGNED,
-FOREIGN KEY (consumer_id) REFERENCES consumer(consumer_id),
-FOREIGN KEY (bay_id) REFERENCES parking_bay(bay_id),
+FOREIGN KEY (consumer_id) REFERENCES consumer(consumer_id) ON DELETE CASCADE,
+FOREIGN KEY (bay_id) REFERENCES parking_bay(bay_id) ON DELETE CASCADE,
 PRIMARY KEY(consumer_id,bay_id)
 );
 
@@ -69,7 +69,7 @@ start_time TIME,
 end_time TIME,
 consumer_id INT(6) UNSIGNED,
 bay_id INT(6) UNSIGNED,
-FOREIGN KEY (consumer_id) REFERENCES consumer(consumer_id),
-FOREIGN KEY (bay_id) REFERENCES parking_bay(bay_id),
+FOREIGN KEY (consumer_id) REFERENCES consumer(consumer_id) ON DELETE CASCADE,
+FOREIGN KEY (bay_id) REFERENCES parking_bay(bay_id) ON DELETE CASCADE,
 PRIMARY KEY(consumer_id,bay_id)
 );
