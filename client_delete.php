@@ -16,9 +16,10 @@
       $sql = "DELETE FROM client WHERE client_id = "."'".$client_id."'";
       if (mysqli_query($con, $sql)){
         echo "parent.showDiv("."'"."Mall deleted successfully"."'".")";
-    } else {
-        echo "parent.showDiv("."'"."We didn't find you! :("."'".")";
-    }
+      }
+      else {
+        echo "parent.showDiv("."'"."We did not find you"."'".")";
+      }
     }
   ?> 
   </script> 

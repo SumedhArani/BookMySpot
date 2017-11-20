@@ -31,6 +31,7 @@
         <script>
         	function getOptions()
         	{
+                console.log("getOptions called?");
         		d1 = document.getElementById("change1");
         		d1.style.display="none";
         		d3 = document.getElementById("change3");
@@ -66,7 +67,16 @@
                 var ip1 = document.getElementById("ip1");
                 var ip2 = document.getElementById("ip2");
                 hid.src = "client_delete.php?uname="+ip1.value+"&pword="+ip2.value;
-            } 
+            }
+            function validateClient()
+            {
+                console.log("login Fn called Bro???");
+                var hid = document.getElementById("hiddenFrame");
+                var cip1 = document.getElementById("cip1");
+                var cip2 = document.getElementById("cip2");
+                hid.src = "client_valid.php?luname="+cip1.value+"&lpword="+cip2.value;
+            }
+
             function showDiv(status)
             {
                 console.log("Fn called???");
@@ -180,18 +190,19 @@
                                 <div  class="single_widget_form text-left">
                                     <form id="formid" method="GET" action="client_valid.php" target="hiddenFrame">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="name" placeholder="Username" required="">
+                                            <input id="cip1" type="text" class="form-control" name="luname" placeholder="Username" required="">
                                         </div>
 
 
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Password">
+                                            <input id="cip2" type="text" name="lpword" class="form-control" placeholder="Password">
                                         </div> <!-- end of form-group -->
 
 
-                                        <input type="submit" value="Login" class="btn btn-primary">
+                                        <input type="submit" value="Login" class="btn btn-primary" onclick="validateClient()">
+                                         <iframe id="hiddenFrame" name="hiddenFrame" width="0px" height="0px"></iframe>
                                     </form>	
-                                    <iframe id="hiddenFrame" name="hiddenFrame" width="0px" height="0px"></iframe>
+                                   
                                 </div>
                             </div>
                             <div id="change2" style="display:none"> 
