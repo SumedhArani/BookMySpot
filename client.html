@@ -60,12 +60,28 @@
         		d4 = document.getElementById("change4");
         		d4.style.display="block";
         	}
-            function deletemall()
+            function deleteMall()
             {
                 var hid = document.getElementById("hidFr");
                 var ip1 = document.getElementById("ip1");
                 var ip2 = document.getElementById("ip2");
                 hid.src = "client_delete.php?uname="+ip1.value+"&pword="+ip2.value;
+            } 
+            function showDiv(status)
+            {
+                console.log("Fn called???");
+                d1 = document.getElementById("change1");
+                d1.style.display="none";
+                d2 = document.getElementById("change2");
+                d2.style.display="none";
+                d3 = document.getElementById("change3");
+                d3.style.display="none";
+                d4 = document.getElementById("change4");
+                d4.style.display="none";
+                d5 = document.getElementById("change5");
+                d5.innerHTML= "<h4 style='font-size:40px;'>"+status+"</h4>";
+                d5.style.display="block";
+
             } 
         </script>
         <style>
@@ -162,7 +178,7 @@
                                 <h3 style="font-size:40px;">Login</h3>
 
                                 <div  class="single_widget_form text-left">
-                                    <form id="formid" onsubmit="getOptions()" method="POST" target="hiddenFrame">
+                                    <form id="formid" method="GET" action="client_valid.php" target="hiddenFrame">
                                         <div class="form-group">
                                             <input type="text" class="form-control" name="name" placeholder="Username" required="">
                                         </div>
@@ -175,7 +191,7 @@
 
                                         <input type="submit" value="Login" class="btn btn-primary">
                                     </form>	
-                                    <iframe name="hiddenFrame" width="0px" height="0px"></iframe>
+                                    <iframe id="hiddenFrame" name="hiddenFrame" width="0px" height="0px"></iframe>
                                 </div>
                             </div>
                             <div id="change2" style="display:none"> 
@@ -217,11 +233,14 @@
                                             <input type="text" id="ip2" class="form-control" name="pword" required="" placeholder="Password">
                                         </div> 
 
-                                        <input type="submit" value="Yes, I'm Sure!" class="btn btn-primary" onclick="deletemall()"> 
+                                        <input type="submit" value="Yes, I'm Sure!" class="btn btn-primary" onclick="deleteMall()"> 
                                         <button onclick="getOptions()" id="2" class="btn btn-primary">No, I Love Your Services</button>
                                         <iframe style="display: none;" id="hidFr" name="hidFr"></iframe>
                                 </form>								
 							</div>
+                            <div id="change5" style="display:none">
+                                                   
+                            </div>
                         </div>
                     </div>
                                 </div>
