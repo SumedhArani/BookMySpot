@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -82,6 +85,10 @@
 
                                 <!-- Collect the nav links, forms, and other content for toggling -->
                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                                    <?php
+                                        echo "<b style='color:white;'>Hello ".$_SESSION['username']."</b>";
+                                    ?>
 
                                     <ul class="nav navbar-nav navbar-right">
                                         <li><a href="#slider">Home</a></li>
@@ -181,7 +188,7 @@
                                             <div class='portfolio_images_overlay'>
                                                 <h6>".$client_addr."</h6>
                                                 <p class='product_price'>".$client_rate."</p>
-                                                <a href='bookPage.html?c_name=$client_name' class='btn btn-primary'>Click here to book</a>
+                                                <a href='bookPage.php?c_name=$client_name' class='btn btn-primary'>Click here to book</a>
                                             </div>
                                     </div>";
                             }

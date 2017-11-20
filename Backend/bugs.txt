@@ -1,0 +1,5 @@
+bookPage.php: Search Feature: Make text field empty: Line 10 submission throttling.php, needle empty case not covered, exposes backend error details in the web UI
+
+bookPage.php: in function address: the radiobuttons must be given a common name attribute for mutual exclusivity
+
+bookPage.php: Input fields in "popup" must be mandatory
