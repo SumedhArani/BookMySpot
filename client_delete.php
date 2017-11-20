@@ -1,20 +1,9 @@
 <?php
 
 include 'connect_to_db.php';
-	if(isset($_POST['mname']))
-		$mname = $_POST['mname'];
-	else
-		echo "Enter parking area name";
-	if(isset($_POST['uname']))
-		$uname = $_POST['uname'];
-	else
-		echo "Enter username";
-	if(isset($_POST['pword']))
-		$pword = $_POST['pword'];
-	else
-		echo "Enter password";
+	extract($_GET);
 
-   	$query = "select client_id from client WHERE username = "."'".$uname."'";
+   	$query = "select client_id from client WHERE username = "."'".$uname."'"." AND passwd ="."'".$pword."'";
    	$result = mysqli_query($con , $query);
 
    	while($client = mysqli_fetch_array($result , MYSQLI_ASSOC))
@@ -26,7 +15,6 @@ include 'connect_to_db.php';
 		} else {
     		echo "Error deleting record: " . $con->error;
 		}
-
    	}
 
 ?>	

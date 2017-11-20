@@ -31,7 +31,6 @@
         <script>
         	function getOptions()
         	{
-        	
         		d1 = document.getElementById("change1");
         		d1.style.display="none";
         		d3 = document.getElementById("change3");
@@ -61,6 +60,13 @@
         		d4 = document.getElementById("change4");
         		d4.style.display="block";
         	}
+            function deletemall()
+            {
+                var hid = document.getElementById("hidFr");
+                var ip1 = document.getElementById("ip1");
+                var ip2 = document.getElementById("ip2");
+                hid.src = "client_delete.php?uname="+ip1.value+"&pword="+ip2.value;
+            } 
         </script>
         <style>
         	.hov: hover{color:gray;}
@@ -153,10 +159,10 @@
                                     <h1>BookMySpot</h1>
                                     <div class="col-md-4">
                             <div id="change1" class="single_widget wow fadeIn" data-wow-duration="5s">
-                                <h3 style="font-size:60px;">Login</h3>
+                                <h3 style="font-size:40px;">Login</h3>
 
                                 <div  class="single_widget_form text-left">
-                                    <form id="formid" onsubmit="getOptions()" target="hiddenFrame">
+                                    <form id="formid" onsubmit="getOptions()" method="POST" target="hiddenFrame">
                                         <div class="form-group">
                                             <input type="text" class="form-control" name="name" placeholder="Username" required="">
                                         </div>
@@ -198,21 +204,22 @@
 								</form>
                             </div>
                             <div id="change4" style="display:none">
-                            	<form id="deleteform" method="POST" action="client_delete.php">
+                            	<form id="deleteform" method="GET" action="client_delete.php" target="hidFr">
                                         <div class="form-group">
                                             <input type="text" class="form-control" name="mname" placeholder="Parking Area Name" required="">
                                         </div>
 
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="uname" required="" placeholder="Username">
+                                            <input id="ip1" type="text" class="form-control" name="uname" required="" placeholder="Username">
                                         </div> 
                                         
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="pword" required="" placeholder="Password">
+                                            <input type="text" id="ip2" class="form-control" name="pword" required="" placeholder="Password">
                                         </div> 
 
-                                        <input type="submit" value="Yes, I'm Sure!" class="btn btn-primary"> 
+                                        <input type="submit" value="Yes, I'm Sure!" class="btn btn-primary" onclick="deletemall()"> 
                                         <button onclick="getOptions()" id="2" class="btn btn-primary">No, I Love Your Services</button>
+                                        <iframe style="display: none;" id="hidFr" name="hidFr"></iframe>
                                 </form>								
 							</div>
                         </div>

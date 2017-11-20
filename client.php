@@ -180,19 +180,14 @@
                                     <div class="col-md-4">
                             <div id="change1" class="single_widget wow fadeIn" data-wow-duration="5s">
                                 <h3 style="font-size:60px;">Login</h3>
-
                                 <div  class="single_widget_form text-left">
                                     <form id="formid" onsubmit="validate()" target="hiddenFrame" action="validate.php" >
                                         <div class="form-group">
                                             <input type="text" class="form-control" name="uname" placeholder="Username" required="">
                                         </div>
-
-
                                         <div class="form-group">
                                             <input type="text" class="form-control" name="pword" placeholder="Password">
                                         </div> <!-- end of form-group -->
-
-
                                         <input type="submit" value="Login" class="btn btn-primary">
                                     </form>	
                                     <iframe name="hiddenFrame" width="0px" height="0px"></iframe>
